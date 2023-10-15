@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from 'react';
+import Sidebar from '../../components/SideBar/sideBar';
+
 
 const Profile = () => {
-    return (
-        <div>
-        <h1>Profile</h1>
-        <p>Welcome to the profile page!</p>
-        </div>
-    );
-}
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
+  };
+
+  return (
+    <div>
+        <Sidebar />
+        {/* {showSidebar && <Sidebar />} */}
+    </div>
+  );
+};
 
 export default Profile;

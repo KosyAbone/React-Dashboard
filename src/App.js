@@ -5,6 +5,10 @@ import Home from './pages/Main/home';
 import Notifications from './pages/Main/notifications';
 import Settings from './pages/Main/settings';
 import Profile from './pages/Main/profile';
+import Map from './pages/SidePages/Map/map';
+import Dashboard from './pages/SidePages/Dashboard/dashboard';
+import Checklist from './pages/SidePages/Checklist/checklist';
+import NewsFeed from './pages/SidePages/NewsFeed/newsfeed';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -17,6 +21,10 @@ const App = () => {
           <Route path="/settings" element={<Settings/>} />
           <Route path="/notifications" element={<Notifications/>} />
           <Route path="/profile" element={<Profile/>} />
+          <Route path="/profile/dashboard" element={<Dashboard/>} />
+          <Route path="/profile/map" element={<Map/>} />
+          <Route path="/profile/checklist" element={<Checklist/>} />
+          <Route path="/profile/news-feed" element={<NewsFeed/>} />
         </Routes>
     </Router>
   );
