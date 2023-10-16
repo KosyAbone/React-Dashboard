@@ -1,5 +1,6 @@
 import React, {useRef} from "react";
 import {useUserContext} from "../../context/userContext";
+import './signUp.css'
 
 const SignUp = () => {
     const emailRef = useRef();
@@ -16,14 +17,17 @@ const SignUp = () => {
         }
     };
     return (
-        <div className="form">
-            <h2>New User</h2>
-            <form onSubmit={onSubmit}>
-                <input placeholder="Email" type="email" ref={emailRef} />
-                <input placeholder="Name" type="name" ref={nameRef} />
-                <input placeholder="Password" type="password" ref={passwordRef} />
-                <button type="submit">Sign Up</button>
-            </form>
+        <div className="form-wrapper">
+            <div className="form-container">
+                <h2>New User</h2>
+                <form className="form" onSubmit={onSubmit}>
+                    <input placeholder="Email" type="email" ref={emailRef} />
+                    <input placeholder="Name" type="name" ref={nameRef} />
+                    <input placeholder="Password" type="password" ref={passwordRef} />
+                </form>
+                <button className="signUpBtn" type="submit">Sign Up</button>
+                <p>Already have an Account? Sign In</p>
+            </div>
         </div>
     );
 };
