@@ -8,8 +8,9 @@ const Sidebar = ({ onItemClick }) => {
         <Link to="/profile/dashboard" className="sidebar-item" onClick={() => onItemClick('DashBoard')}>Profile</Link>
         <Link to="/profile/map" className="sidebar-item" onClick={() => onItemClick('Map')}>Map</Link>
         <Link to="/profile/news-feed" className="sidebar-item" onClick={() => onItemClick('Checklist')}>News Feed</Link>
-        <Link to="/profile/weather" className="sidebar-item" onClick={() => onItemClick('NewsFeed')}>Weather</Link>
-        <Link to="/profile/tools" className="sidebar-item" onClick={() => onItemClick('NewsFeed')}>Tools</Link>
+        <Link to="/profile/weather" className="sidebar-item" onClick={() => onItemClick('Weather')}>Weather</Link>
+        <Link to="/profile/tools" className="sidebar-item" onClick={() => onItemClick('Tools')}>Tools</Link>
+        <button className='logoutBtn'>Logout</button>
     </div>
   );
 };

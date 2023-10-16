@@ -12,7 +12,6 @@ const Profile = () => {
   return (
     <div>
         <Sidebar />
-        {/* {showSidebar && <Sidebar />} */}
     </div>
   );
 };
