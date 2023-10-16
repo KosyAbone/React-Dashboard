@@ -7,7 +7,7 @@ const NavBar = () => {
     <nav className="navbar">
         <Link to="/" className="nav-item"><i className="fas fa-home"></i>Home</Link>
         <Link to="/settings" className="nav-item"><i className="fas fa-cog"></i>Settings</Link> 
-        <Link to="/notifications" className="nav-item"><i className="fas fa-bell"></i>Notifications</Link>
+        <Link to="/notifications" className="nav-item"><i className="fas fa-bell"></i>Users</Link>
         <Link to="/profile" className="nav-item"><i className="fas fa-user"></i>
             Profile
         </Link>
