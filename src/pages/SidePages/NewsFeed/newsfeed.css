@@ -1,0 +1,14 @@
+.newsfeed-container {
+    width: 100%;
+    margin: 10px;
+}
+.search-input {
+    width: 500px;
+}
+.news-card {
+    background-color: lightblue;
+    width: auto;
+    border-radius: 15px;
+    padding: 6px;
+    margin: 8px;
+}
