@@ -1,0 +1,32 @@
+.form-wrapper{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container{
+    background-color: rgb(159, 206, 248);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    max-width: 300px;
+    padding: 40px 20px;
+}
+
+.form{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input{
+    
+    width: 100%;
+}
