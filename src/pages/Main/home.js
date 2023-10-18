@@ -1,12 +1,31 @@
-import React from "react";
+import React from 'react';
+import './home.css';
 
-const Home = () => {
-    return (
-        <div>
-        <h1>Home</h1>
-        <p>Welcome to the home page!</p>
+function Home() {
+  const navigateToAbout = () => {
+    window.location.href = '/about';
+  };
+
+  return (
+    <div className="home">
+      <header>
+        <div className="marquee-text"><h1>Assignment 2</h1></div>
+      </header>
+      <main>
+        <div className="contributors">
+          <div className="contributor" onClick={navigateToAbout}>
+            <h2>Kosisochukwu's Contribution</h2>
+          </div>
+          <div className="contributor" onClick={navigateToAbout}>
+            <h2>Abhijit's Contribution</h2>
+          </div>
+          <div className="contributor" onClick={navigateToAbout}>
+            <h2>Ilham's Contribution</h2>
+          </div>
         </div>
-    );
+      </main>
+    </div>
+  );
 }
 
 export default Home;

@@ -3,7 +3,7 @@ import React from 'react'
 import NavBar from './components/NavBar/navbar.js';
 import Home from './pages/Main/home';
 import Notifications from './pages/Main/notifications';
-import Settings from './pages/Main/settings';
+import About from './pages/Main/about';
 import Profile from './pages/Main/profile';
 import Map from './pages/SidePages/Map/map';
 import Dashboard from './pages/SidePages/Dashboard/dashboard';
@@ -21,7 +21,7 @@ const App = () => {
       <NavBar />
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/settings" element={<Settings/>} />
+          <Route path="/about" element={<About/>} />
           <Route path="/notifications" element={<Notifications/>} />
           <Route path="/profile" element={<Profile/>}>
             <Route path="/profile/dashboard" element={<Dashboard/>} />
