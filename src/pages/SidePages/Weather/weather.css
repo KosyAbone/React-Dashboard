@@ -1,0 +1,9 @@
+.container {
+    margin: 10px;
+}
+.weather-card {
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 15px;
+    width: fit-content;
+}
