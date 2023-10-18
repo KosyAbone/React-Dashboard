@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Sidebar from '../../components/SideBar/sideBar';
 import { Outlet } from 'react-router-dom';
 import './profile.css';
