@@ -7,7 +7,7 @@ import {
     signOut,
     sendPasswordResetEmail
 } from 'firebase/auth'
-import {auth} from "../firebase";
+import {auth} from '../firebase';
 const UserContext = createContext({})
 //Custom Hook useUserContext
 export const useUserContext = () => useContext(UserContext);
@@ -38,6 +38,7 @@ export const UserContextProvider = ({ children }) => {
     };
 
     const signInUser = (email, password) => {
+        console.log('working')
         setLoading(true)
         signInWithEmailAndPassword(auth, email, password)
             .then((res) => console.log(res))
