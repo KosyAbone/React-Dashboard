@@ -1,6 +1,7 @@
 .container {
     margin: 10px;
 }
+
 .weather-card {
     padding: 10px;
     background-color: lightblue;
@@ -25,6 +26,9 @@
 
 .search-weather input {
     width: 500px;
+    margin: 8px;
+    height: 30px;
+    padding: 10px;
 }
 
 .search-weather button {

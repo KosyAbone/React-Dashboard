@@ -15,7 +15,7 @@
 }
 
 .location-search {
-    width : 50%;
+    width: 50%;
     margin: 10px;
     flex-direction: row;
 }
@@ -25,7 +25,13 @@
 }
 
 .location-input {
-    margin-left: 10px;
+    margin: 10px;
+    flex-direction: column;
+    display: flex;
+}
+
+.location-input input {
+    height: 30px;
 }
 
 .location-print {
@@ -35,5 +41,6 @@
 }
 
 .search-button {
-    margin-left: 7px;
+    margin: 7px;
+    width: 100px;
 }
