@@ -7,6 +7,7 @@ const SignIn = () => {
     const passwordRef = useRef();
     const {signInUser, forgotPassword} = useUserContext();
     const onSubmit = (e) => {
+        console.log("clicked")
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
