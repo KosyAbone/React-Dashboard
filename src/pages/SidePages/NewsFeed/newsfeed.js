@@ -44,7 +44,7 @@ const NewsFeed = () => {
         <div>
             <h2>News Feed</h2>
             <input className="search-input" type="text" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="Search News" />
-            <button type="Submit" onClick={searchNews}>Search</button>
+            <button className="search-button" type="Submit" onClick={searchNews}>Search</button>
         </div>
       {loading ? (
         <p>Loading...</p>

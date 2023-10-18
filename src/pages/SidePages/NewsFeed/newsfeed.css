@@ -5,6 +5,12 @@
 .search-input {
     width: 500px;
 }
+.search-button {
+    background-color: rgb(163, 160, 160);
+    border-radius: 6px;
+    height: 30px;
+    padding: 3px;
+}
 .news-card {
     background-color: lightblue;
     width: auto;

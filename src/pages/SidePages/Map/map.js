@@ -41,6 +41,7 @@ const handleSearch = () => {
     return (
     <div style={{maxWidth: '100%' }}>
         <div className="location-search">
+            <h1>Search Location</h1>
             <input type="text" value={searchLocation} onChange={(e) => setLocationValue(e.target.value)} placeholder="Search Location" />
             <button type="submit">Search</button>
         </div>
