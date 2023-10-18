@@ -23,12 +23,13 @@ const App = () => {
           <Route path="/" element={<Home/>} />
           <Route path="/settings" element={<Settings/>} />
           <Route path="/notifications" element={<Notifications/>} />
-          <Route path="/profile" element={<Profile/>} />
-          <Route path="/profile/dashboard" element={<Dashboard/>} />
-          <Route path="/profile/map" element={<Map/>} />
-          <Route path="/profile/weather" element={<Weather/>} />
-          <Route path="/profile/news-feed" element={<NewsFeed/>} />
-          <Route path="/profile/tools" element={<ToolsWidget/>} />
+          <Route path="/profile" element={<Profile/>}>
+            <Route path="/profile/dashboard" element={<Dashboard/>} />
+            <Route path="/profile/map" element={<Map/>} />
+            <Route path="/profile/weather" element={<Weather/>} />
+            <Route path="/profile/news-feed" element={<NewsFeed/>} />
+            <Route path="/profile/tools" element={<ToolsWidget/>} />
+          </Route>
           <Route path="/sign-in" element={<SignIn/>} />
           <Route path="/sign-up" element={<SignUp/>} />
           <Route path="*" element={<h1>Not Found</h1>} />

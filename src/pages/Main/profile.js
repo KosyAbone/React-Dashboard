@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
 import Sidebar from '../../components/SideBar/sideBar';
+import { Outlet } from 'react-router-dom';
+import './profile.css';
 
 
 const Profile = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
+  // const [showSidebar, setShowSidebar] = useState(false);
 
-  const toggleSidebar = () => {
-    setShowSidebar(!showSidebar);
-  };
+  // const toggleSidebar = () => {
+  //   setShowSidebar(!showSidebar);
+  // };
 
   return (
-    <div>
+    <div className='profile-container'>
         <Sidebar />
+        <div className='content'>
+          <div>
+            <Outlet />
+          </div>
+        </div>
     </div>
   );
 };
