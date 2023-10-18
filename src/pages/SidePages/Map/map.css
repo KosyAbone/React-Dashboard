@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    height: 100%;
+}
+
+/* sizing of map container */
+.leaflet-container {
+    margin: 10vh;
+    height: 100vh;
+}
+
+.location-search {
+    width : 50%;
+    margin: 10px;
+    flex-direction: row;
+}
