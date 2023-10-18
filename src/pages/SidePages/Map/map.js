@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet';
 import "./map.css";
 import "leaflet/dist/leaflet.css";
@@ -42,7 +42,7 @@ const handleSearch = () => {
     <div style={{maxWidth: '100%' }}>
         <div className="location-search">
             <input type="text" value={searchLocation} onChange={(e) => setLocationValue(e.target.value)} placeholder="Search Location" />
-            <button type="submit" onClick={handleSearch}>Search</button>
+            <button type="submit">Search</button>
         </div>
       <MapContainer center={location} zoom={13} scrollWheelZoom={false}>
                 <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
