@@ -28,6 +28,7 @@
     width: 200px;
     position: fixed;
     transition: left 0.3s;
+    margin-top: 68px;
   }
 
   .sidebar-item {
