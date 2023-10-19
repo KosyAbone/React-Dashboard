@@ -22,17 +22,15 @@ const SignIn = () => {
         }
     };
     return (
-        <div className="login-wrapper">
             <div className="signIn-container">
-                <h2>Login</h2>
+                <h2 className="login-heading">Login</h2>
                 <form className="signIn-form" onSubmit={onSubmit}>
                     <input placeholder="Email" type="email" ref={emailRef} />
                     <input placeholder="Password" type="password" ref={passwordRef} />
-                    <button className="login-btn" type="submit">Sign In</button>
+                    <button className="submit-btn" type="submit">Sign In</button>
                     <p onClick={forgotPasswordHandler}>Forgot Password?</p>
                 </form>
             </div>
-        </div>
     );
 };
 

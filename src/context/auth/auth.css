@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(163, 184, 229);
+}
+
+.signIn-signUpLink:hover {
+    background: none;
+    
+}
+.signIn-signUpLink{
+    background: none;
+    text-decoration: underline;
+    border: none;
+    color: blue
+ }
