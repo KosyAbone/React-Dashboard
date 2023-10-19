@@ -36,8 +36,14 @@ const Weather = () => {
                 setLoading(false);
             }
             catch(error){
-                setError(error);
-                setLoading(false);
+                if(location === ''){
+                    error.message = 'Please enter a location to fetch the weather data';
+                    setError(error)
+                }
+                else {
+                    setError(error);
+                }
+                setLoading(false)
             }
         };
 
@@ -52,9 +58,9 @@ const Weather = () => {
             <button type="submit" onClick={fetchData}>Fetch Weather</button>
         </div>
         {loading ? (
-            <p>Loading...</p>
+            <p className="loading-weather">Loading...</p>
         ): error ? (
-            <p>Error : {error.message}</p>
+            <p className="error-weather">Error : {error.message}</p>
         ): (
             <div className="weather-card">
                 <strong>Location : {weatherData.location.name}, {weatherData.location.country}</strong>
