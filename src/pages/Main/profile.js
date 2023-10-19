@@ -5,11 +5,6 @@ import './profile.css';
 
 
 const Profile = () => {
-  // const [showSidebar, setShowSidebar] = useState(false);
-
-  // const toggleSidebar = () => {
-  //   setShowSidebar(!showSidebar);
-  // };
 
   const [selectedItem, setSelectedItem] = useState(null);
 
