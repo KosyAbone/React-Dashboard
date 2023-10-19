@@ -4,9 +4,10 @@
     justify-content: flex-end;
     align-items: center;
     padding: 10px;
-    position: relative;
+    position: fixed;
     width: 100%;
     z-index: 1000;
+    
   }
   
   .nav-item {

@@ -1,0 +1,82 @@
+.tools-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.tool-container {
+    display: flex;
+    margin: 20px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tool-card {
+    background-color: lightblue;
+    border-radius: 15px;
+    border-width: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.word-h2 {
+    margin-bottom: 20px;
+}
+
+.word-label {
+    font-size: larger;
+    margin-bottom: 8px;
+}
+
+.word-input {
+    padding-left: 10px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.word-h3 {
+    margin-top: 20px;
+}
+
+.color-h2 {
+    margin-bottom: 10px;
+}
+
+.tool-card .color-label {
+    margin-bottom: 4px;
+}
+
+.tool-card .color-input {
+    padding-left: 10px;
+    height: 30px;
+}
+
+.tool-card .color-h4 {
+    margin-top: 10px;
+}
+
+.color-picker {
+    margin-top: 15px;
+}
+
+.selected-color {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.color-preview {
+    border-width: 6px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    margin-top: 10px;
+}
