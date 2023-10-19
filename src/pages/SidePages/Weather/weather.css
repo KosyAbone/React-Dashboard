@@ -1,6 +1,7 @@
 .container {
     margin: 10px;
 }
+
 .weather-card {
     padding: 10px;
     background-color: lightblue;
@@ -10,4 +11,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
+}
+
+.search-weather {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-weather label {
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+.search-weather input {
+    width: 500px;
+    margin: 8px;
+    height: 30px;
+    padding: 10px;
+}
+
+.search-weather button {
+    margin-left: 8px;
+    margin-top: 4px;
+    background-color: rgb(163, 160, 160);
+    border-radius: 6px;
+    height: 30px;
+    width: fit-content;
+    padding: 4px;
 }

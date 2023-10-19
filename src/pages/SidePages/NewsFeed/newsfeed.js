@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './newsfeed.css';
 
@@ -7,7 +7,28 @@ const NewsFeed = () => {
     const [newsData, setNewsData] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [topic, setTopic] = useState('');
+    const [topic, setTopic] = useState('Canada Latest');
+
+    //Display the newsfeed on first launch
+    useEffect( () => {
+      const fetchNews = async () => {
+        setLoading(true);
+        
+        const url = `https://newsapi.org/v2/everything?q=${topic}&apiKey=6c3e339d0b2b4276a1c1b0ed696e52ac`;
+        console.log(url)
+        
+        try {
+            const response = await axios.request(url);
+            setNewsData(response.data);
+            setLoading(false);
+        } catch (error) {
+          setError(error);
+          setLoading(false);
+        }
+    };
+
+    fetchNews()
+    },[])
     
     /* fetch the news from the API */
     const fetchNews = async () => {
@@ -42,7 +63,7 @@ const NewsFeed = () => {
     return (
     <div className="newsfeed-container">
         <div>
-            <h2>News Feed</h2>
+            <h1>Latest News</h1>
             <input className="search-input" type="text" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="Search News" />
             <button className="search-button" type="Submit" onClick={searchNews}>Search</button>
         </div>

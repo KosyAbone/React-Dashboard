@@ -1,9 +1,12 @@
 .navbar {
-    background-color: blue;
+    background-color: rgb(58, 118, 137);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 10px;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
   }
   
   .nav-item {
