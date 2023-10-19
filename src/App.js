@@ -1,35 +1,38 @@
 import './App.css';
 import React from 'react'
-import NavBar from './components/NavBar/navBar'
-import Home from './pages/Main/home';
-import Notifications from './pages/Main/notifications';
-import About from './pages/Main/about';
-import Profile from './pages/Main/profile';
-import Map from './pages/SidePages/Map/map';
-import Dashboard from './pages/SidePages/Dashboard/dashboard';
-import Weather from './pages/SidePages/Weather/weather';
-import NewsFeed from './pages/SidePages/NewsFeed/newsfeed';
-import ToolsWidget from './pages/SidePages/ToolsWidget/toolsPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './pages/public/Login/login';
+import { UserContextProvider } from './context/userContext';
+import NavBar from './components/NavBar/navBar'
+import Home from './pages/public/Main/home';
+import About from './pages/public/Main/about';
+import UserList from './pages/public/Main/userList';
+import Map from './pages/private/Map/map';
+import Profile from './pages/private/Profile/profile';
+import Weather from './pages/private/Weather/weather';
+import NewsFeed from './pages/private/NewsFeed/newsfeed';
+import ToolsWidget from './pages/private/ToolsWidget/toolsPage';
 
 const App = () => {
   return (
-    <Router>
-      <NavBar />
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/notifications" element={<Notifications/>} />
-          <Route path="/login" element={<Profile/>}>
-            <Route path="/login/dashboard" element={<Dashboard/>} />
-            <Route path="/login/map" element={<Map/>} />
-            <Route path="/login/weather" element={<Weather/>} />
-            <Route path="/login/news-feed" element={<NewsFeed/>} />
-            <Route path="/login/tools" element={<ToolsWidget/>} />
-          </Route>
-          <Route path="*" element={<h1>Not Found</h1>} />
-        </Routes>
-    </Router>
+    <UserContextProvider>
+      <Router>
+        <NavBar />
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="about" element={<About/>} />
+            <Route path="users" element={<UserList/>} />
+            <Route path="login" element={<Login/>}>
+              <Route path="profile" element={<Profile/>} />
+              <Route path="map" element={<Map/>} />
+              <Route path="weather" element={<Weather/>} />
+              <Route path="news-feed" element={<NewsFeed/>} />
+              <Route path="tools" element={<ToolsWidget/>} />
+            </Route>
+            <Route path="*" element={<h1>Not Found</h1>} />
+          </Routes>
+      </Router>
+    </UserContextProvider>
   );
 }
 
