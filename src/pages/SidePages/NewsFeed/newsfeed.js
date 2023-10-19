@@ -44,13 +44,13 @@ const NewsFeed = () => {
         } catch (error) {
             /* if user searched with empty text show loading and no error else show error*/
             if(topic === ''){
-                setLoading(true)
-                setError(null)
+                error.message = 'Please search for a news topic';
+                setError(error);
             }
             else{
                 setError(error);
-                setLoading(false);
             }
+            setLoading(false);
         }
     };
 
@@ -70,7 +70,7 @@ const NewsFeed = () => {
       {loading ? (
         <p>Loading...</p>
       ) : error ? (
-        <p>Error: {error.message}</p>
+        <p className="news-error">Error: {error.message}</p>
       ) : (
         <div>
             {newsData.articles.map((article, index) => (

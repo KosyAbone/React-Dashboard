@@ -57,12 +57,9 @@
     padding: 10px;
     background-color: rgb(204, 41, 41);
     opacity: 70%;
-    border-radius: 10px;
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-top: 15px;
 }
 

@@ -27,7 +27,7 @@ const ToolsPage = () => {
 
         <div className="tool-container">
             <div className="tool-card">
-                <h2 className="word-h2">Word Count</h2>
+                <h2 className="word-h2">Word Count Tool</h2>
                 <label className="word-label">Enter a word below</label>
                 <input className="word-input" type="text" value={word} onChange={getWordCount} placeholder="Enter a word here"></input>
                 <h3 className="word-h3">Word Count : {wordCount}</h3>
