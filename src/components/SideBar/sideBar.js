@@ -3,7 +3,7 @@ import './sideBar.css';
 import { Link } from 'react-router-dom';
 import { useUserContext } from '../../context/userContext'; 
 
-const Sidebar = ({ onItemClick }) => {
+const Sidebar = () => {
   const { logoutUser } = useUserContext();
   return (
     <div className="sidebar">
