@@ -7,10 +7,7 @@ function Home() {
   };
 
   return (
-    <div className="home">
-      <div className="marquee-text">
-        <h1>Assignment 2</h1>
-      </div>
+    
       <main>
         <div className="contributors">
           <div className="contributor" onClick={navigateToAbout}>
@@ -24,7 +21,7 @@ function Home() {
           </div>
         </div>
       </main>
-    </div>
+  
   );
 }
 
