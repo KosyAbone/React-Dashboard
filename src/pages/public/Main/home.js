@@ -13,9 +13,11 @@ function Home() {
           <div className="contributor" onClick={navigateToAbout}>
             <h2>Kosisochukwu's Contribution</h2>
           </div>
+
           <div className="contributor" onClick={navigateToAbout}>
             <h2>Abhijit's Contribution</h2>
           </div>
+          
           <div className="contributor" onClick={navigateToAbout}>
             <h2>Ilham's Contribution</h2>
           </div>
