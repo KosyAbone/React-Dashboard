@@ -3,9 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
-    background-color: rgb(163, 184, 229);
 }
 
 .signIn-signUpLink:hover {
