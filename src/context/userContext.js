@@ -1,4 +1,5 @@
 import {createContext, useContext, useEffect, useState} from "react";
+import { createUserProfile } from "../firebase/createUserProfile";
 import {
     createUserWithEmailAndPassword,
     updateProfile,
@@ -8,6 +9,7 @@ import {
     sendPasswordResetEmail
 } from 'firebase/auth'
 import {auth} from '../firebase';
+import { toast } from 'react-toastify';
 const UserContext = createContext({})
 //Custom Hook useUserContext
 export const useUserContext = () => useContext(UserContext);
@@ -27,27 +29,57 @@ export const UserContextProvider = ({ children }) => {
         return unsubscribe;
     }, []);
 
-    const registerUser = (email, name, password) => {
-        setLoading(true)
-        createUserWithEmailAndPassword(auth, email, password).then(() => {
-            updateProfile(auth.currentUser, {
-                displayName : name,
+    const registerUser = async (email, name, password) => {
+        setLoading(true);
+        
+        try {
+          // Register the user with Firebase Authentication
+          const authResult = await createUserWithEmailAndPassword(auth, email, password);
+          const { user } = authResult;
+          // Update the user's display name
+          await updateProfile(user, {
+            displayName: name,
+          });
+          // Create the user profile in the Firestore database
+          await createUserProfile(user.uid, name, email);
+      
+          // Show a success message using react-toastify
+            toast.success('Registration Successful!', {
+                position: toast.POSITION.BOTTOM_CENTER,
             });
-        }).then((res) => console.log(res))
-        .catch(err => setError(err.message)).finally(() => setLoading(false));
+          // Clear any previous errors
+          setError('');
+      
+          // Update the user context
+          setUser(user);
+        } catch (error) {
+          setError(error.message);
+          console.error('Error registering user:', error);
+        } finally {
+          setLoading(false);
+        }
     };
 
     const signInUser = (email, password) => {
-        console.log('working')
         setLoading(true)
         signInWithEmailAndPassword(auth, email, password)
-            .then((res) => console.log(res))
+            .then((res) => {
+                toast.success('Login Successful!', {
+                    position: toast.POSITION.BOTTOM_CENTER,
+                });
+            })
             .catch((err) => setError(err.message))
             .finally(() => setLoading(false));
     };
 
     const logoutUser = () => {
-       signOut(auth);
+       signOut(auth)
+            .then(() => {
+                toast.success('Logout Successful!', {
+                    position: toast.POSITION.BOTTOM_CENTER,
+                });
+            })
+            .catch((err) => setError(err.message))
     };
 
     const forgotPassword = (email) => {
@@ -64,7 +96,7 @@ export const UserContextProvider = ({ children }) => {
         forgotPassword
     };
 
-    return <UserContext.Provider value={contextValue}>
-        {children}
-    </UserContext.Provider>
+    return  <UserContext.Provider value={contextValue}>
+                {children}
+            </UserContext.Provider>
 }

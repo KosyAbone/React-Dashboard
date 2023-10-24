@@ -6,7 +6,7 @@ import './login.css';
 
 const Login = () => {   
     const { loading, error, user } = useUserContext();
-    console.log(error)
+    
     return (
         <div className="auth-container">
             {error && <p>{error}</p>}   
