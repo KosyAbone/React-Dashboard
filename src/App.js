@@ -1,5 +1,7 @@
-import './App.css';
 import React from 'react'
+import './App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/public/Login/login';
 import { UserContextProvider } from './context/userContext';
@@ -32,6 +34,7 @@ const App = () => {
             <Route path="*" element={<h1>Not Found</h1>} />
           </Routes>
       </Router>
+      <ToastContainer />
     </UserContextProvider>
   );
 }
