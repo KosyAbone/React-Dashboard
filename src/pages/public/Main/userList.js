@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../../../firebase';
 import { collection, getDocs } from 'firebase/firestore';
+import './userList.css';
 
 const UsersList = () => {
   const [users, setUsers] = useState([]);
@@ -26,20 +27,33 @@ const UsersList = () => {
     fetchUsers();
   }, []);
 
-  const fetchedList = loading ? <p>Loading...</p>
-    : 
-    <ul>
-      {users.map((user) => (
-        <li key={user.uid}>
-            <strong>Name:</strong> {user.name}, <strong>Email:</strong> {user.email}
-        </li>
-      ))}
-    </ul>
-  
+  const fetchedList = loading ? <p>Loading...</p> : (
+    <table className="user-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {users.map((user) => (
+          <tr key={user.uid}>
+            <td>{user.uid}</td>
+            <td>{user.name}</td>
+            <td>{user.email}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+
   return (
-    <div>
+    <div className="user-container">
       <h2>List of Registered Users</h2>
-      {fetchedList}
+      <div className="user-table-container">
+        {fetchedList}
+      </div>
     </div>
   );
 };
