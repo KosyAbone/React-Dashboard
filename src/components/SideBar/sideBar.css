@@ -10,14 +10,19 @@
     padding-top: 1.5em;
   }
 
-  .sidebar-item {
+  .sidenav-item {
     display: block;
     padding: 15px;
     text-decoration: none;
     color: white;
   }
 
-  .sidebar-item:hover {
+  .sidenav-item:hover {
+    background-color: #beb9b9;
+    color: white;
+  }
+
+  .active{
     background-color: #333;
     color: white;
   }
