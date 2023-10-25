@@ -1,0 +1,27 @@
+.profile-card {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid rgb(58, 118, 137);
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .profile-title {
+    font-size: 24px;
+    color: rgb(58, 118, 137);
+    margin-bottom: 20px;
+  }
+  
+  .profile-email {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-id {
+    font-size: 16px;
+  }
+  
