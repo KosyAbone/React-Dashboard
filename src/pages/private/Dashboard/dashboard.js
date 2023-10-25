@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Sidebar from '../../../components/SideBar/sideBar';
 import { Outlet } from 'react-router-dom';
 import './dashboard.css';
+import Profile from '../Profile/profile'
 
 
-const Profile = () => {
+const Dashboard = () => {
 
   return (
-    <div className='profile-container'>
+    <div className='dashboard-container'>
         <Sidebar />
         <div className='content'>
           <div>
@@ -18,4 +19,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Dashboard;

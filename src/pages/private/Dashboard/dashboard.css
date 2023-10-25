@@ -1,4 +1,4 @@
-.profile-container {
+.dashboard-container {
     display: flex;
 }
 
@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 768px) {
-    .profile-container {
+    .dashboard-container {
         flex-direction: column;
         /* Change to a column layout on smaller screens */
     }
