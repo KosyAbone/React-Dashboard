@@ -25,7 +25,7 @@
     margin-left: 20px;
 }
 
-.word-h2 {
+.word-h3 {
     margin-bottom: 20px;
 }
 
@@ -41,11 +41,11 @@
     margin-top: 10px;
 }
 
-.word-h3 {
+.word-h2 {
     margin-top: 20px;
 }
 
-.color-h2 {
+.color-h3 {
     margin-bottom: 10px;
 }
 
@@ -58,7 +58,7 @@
     height: 30px;
 }
 
-.tool-card .color-h4 {
+.tool-card .color-h2 {
     margin-top: 10px;
 }
 

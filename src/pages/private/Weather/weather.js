@@ -48,7 +48,7 @@ const Weather = () => {
         };
 
     return (
-        <div className="container">
+        <div className="weather-container">
         <h1>Current Weather</h1>
         <div className="search-weather">
             <label>
