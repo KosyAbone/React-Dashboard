@@ -5,11 +5,13 @@ import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
 
 const Map = () => {
+    //hooks
     const [latitude, setLatitude] = useState(67.59);
     const [longitude, setLongitude] = useState(58.67);
     const [location, setLocation] = useState([latitude, longitude]);
     const [mapKey, setMapKey] = useState("mapKey");
 
+    //creating icon for map marker
     const customIcon = new Icon({
         iconUrl : require("../../../assets/location-pin.png"),
         iconSize : [38, 38]
@@ -21,6 +23,7 @@ const Map = () => {
     }, [latitude, longitude]);
 
 
+    //function to handle search button click
     const handleSearch = () => {
         setLocation([latitude, longitude]);
         setMapKey(Date.now().toString());
