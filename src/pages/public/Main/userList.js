@@ -31,7 +31,6 @@ const UsersList = () => {
     <table className="user-table">
       <thead>
         <tr>
-          <th>ID</th>
           <th>Name</th>
           <th>Email</th>
         </tr>
@@ -39,7 +38,6 @@ const UsersList = () => {
       <tbody>
         {users.map((user) => (
           <tr key={user.uid}>
-            <td>{user.uid}</td>
             <td>{user.name}</td>
             <td>{user.email}</td>
           </tr>
