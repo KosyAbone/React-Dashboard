@@ -11,16 +11,18 @@ import {
 import {auth} from '../firebase';
 import { toast } from 'react-toastify';
 const UserContext = createContext({})
-//Custom Hook useUserContext
+
+// Custom Hook to access the user context
 export const useUserContext = () => useContext(UserContext);
 
 export const UserContextProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState();
-    const [error, setError] = useState("");
+    const [user, setUser] = useState(null); // State to store user data
+    const [loading, setLoading] = useState(); // State to track loading status
+    const [error, setError] = useState(""); // State to store error messages
 
     useEffect(() => {
         setLoading(true)
+        // Listen for authentication state changes
         const unsubscribe = onAuthStateChanged(auth, res => {
             res ? setUser(res) : setUser(null);
             setError("");
@@ -29,6 +31,7 @@ export const UserContextProvider = ({ children }) => {
         return unsubscribe;
     }, []);
 
+    // Function to register a new user
     const registerUser = async (email, name, password) => {
         setLoading(true);
         
@@ -47,12 +50,10 @@ export const UserContextProvider = ({ children }) => {
             toast.success('Registration Successful!', {
                 position: toast.POSITION.BOTTOM_CENTER,
             });
-          // Clear any previous errors
-          setError('');
-      
-          // Update the user context
-          setUser(user);
-        } catch (error) {
+          setError(''); // Clear any previous errors
+          setUser(user); // Update the user context with the new user
+        } 
+        catch (error) {
           setError(error.message);
           console.error('Error registering user:', error);
         } finally {
@@ -60,6 +61,7 @@ export const UserContextProvider = ({ children }) => {
         }
     };
 
+    // Function to sign in a user
     const signInUser = (email, password) => {
         setLoading(true)
         signInWithEmailAndPassword(auth, email, password)
@@ -72,6 +74,7 @@ export const UserContextProvider = ({ children }) => {
             .finally(() => setLoading(false));
     };
 
+    // Function to log out a user
     const logoutUser = () => {
        signOut(auth)
             .then(() => {
@@ -82,10 +85,12 @@ export const UserContextProvider = ({ children }) => {
             .catch((err) => setError(err.message))
     };
 
+    // Function to send a password reset email
     const forgotPassword = (email) => {
         return sendPasswordResetEmail(auth, email);
     };
 
+    // Create the context value with user data, loading, and functions
     const contextValue = {
         user,
         loading,
