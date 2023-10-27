@@ -3,7 +3,10 @@ import { auth } from "../../../firebase";
 import './profile.css';
 
 const Profile = () => {
+    // Get the currently authenticated user
     const user = auth.currentUser;
+
+    // Initialize variables to store user information
     let userId = '';
     let userName = '';
     let userEmail = '';

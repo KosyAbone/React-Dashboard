@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import './newsfeed.css';
+import './news-feed.css';
 
 const NewsFeed = () => {
-  //hooks
+  // Hooks to track/manage news data, loading state, and errors
   const [newsData, setNewsData] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [topic, setTopic] = useState('Canada Latest');
 
-  //Display the newsfeed on first launch
+  //Display the news-feed on first launch
   useEffect( () => {
     const fetchNews = async () => {
       setLoading(true);

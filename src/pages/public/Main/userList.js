@@ -4,7 +4,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import './userList.css';
 
 const UsersList = () => {
-  // State to store the list of users and loading status
+  // State to store/manage the list of users and loading status
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 

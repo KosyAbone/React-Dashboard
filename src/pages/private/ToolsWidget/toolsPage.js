@@ -4,7 +4,7 @@ import "./toolsPage.css"
 
 
 const ToolsPage = () => {
-    //hooks for word and color selected
+    //Hooks to track word and color selected
     const [word, setWord] = useState('');
     const [color, setColor] = useState("#ffffff");
     
