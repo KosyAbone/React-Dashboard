@@ -4,7 +4,7 @@ import { db } from './index';
 // This function creates a user profile document in Firestore
 export const createUserProfile = async (uid, name, email) => {
     try {
-      const usersCollection = collection(db, 'users'); // Replace 'users' with your Firestore collection name
+      const usersCollection = collection(db, 'users'); // Get the 'users' Firestore collection
       await addDoc(usersCollection, {
         uid,
         name,
