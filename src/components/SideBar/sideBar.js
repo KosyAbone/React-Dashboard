@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 import { useUserContext } from '../../context/userContext'; 
 
 const Sidebar = () => {
+  // Access the `logoutUser` function from the user context
   const { logoutUser } = useUserContext();
 
+  // State to track the active navigation item
   const [activeItem, setActiveItem] = useState(null);
 
+  // Function to handle the click event on navigation items
   const handleNavItemClick = (route) => {
     setActiveItem(route);
   };

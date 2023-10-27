@@ -9,10 +9,25 @@ const NavBar = () => {
         <h1>Xplorer</h1>
       </div>
       <nav className="navbar">
-          <Link to="/" className="nav-item"><i className="fas fa-home"></i>Home</Link>
-          <Link to="/about" className="nav-item"><i className="fas fa-cog"></i>About</Link> 
-          <Link to="/users" className="nav-item"><i className="fas fa-bell"></i>Users</Link>
-          <Link to="/login" className="nav-item"><i className="fas fa-user"></i>Account</Link>
+        {/* Home link */}
+        <Link to="/" className="nav-item">
+          <i className="fas fa-home"></i>Home
+        </Link>
+
+        {/* About link */}
+        <Link to="/about" className="nav-item">
+          <i className="fas fa-cog"></i>About
+        </Link>
+
+        {/* Users link */}
+        <Link to="/users" className="nav-item">
+          <i className="fas fa-bell"></i>Users
+        </Link>
+
+        {/* Account link */}
+        <Link to="/login" className="nav-item">
+          <i className="fas fa-user"></i>Account
+        </Link>
       </nav>
     </header>
   );

@@ -7,12 +7,15 @@ const SignUp = () => {
     const nameRef = useRef();
     const passwordRef = useRef();
     const { registerUser } = useUserContext();
+    
+    // Function to handle the form submission
     const onSubmit = (e) => {
         e.preventDefault();
         const email = emailRef.current.value;
         const name = nameRef.current.value;
         const password = passwordRef.current.value;
         if (email && name && password) {
+            // Register the user with provided email, name, and password
             registerUser(email, name, password);
         }
     };
