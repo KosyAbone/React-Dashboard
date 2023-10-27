@@ -5,7 +5,7 @@ import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
 
 const Map = () => {
-    //hooks
+    // Hooks to manage location and map data
     const [latitude, setLatitude] = useState(67.59);
     const [longitude, setLongitude] = useState(58.67);
     const [location, setLocation] = useState([latitude, longitude]);
