@@ -4,15 +4,18 @@ import { collection, getDocs } from 'firebase/firestore';
 import './userList.css';
 
 const UsersList = () => {
+  // State to store the list of users and loading status
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
+        // Get the 'users' collection from Firestore
         const usersCollection = collection(db, 'users');
         const usersSnapshot = await getDocs(usersCollection);
 
+        // Extract user data from the Firestore documents
         const usersData = usersSnapshot.docs.map((userDoc) => ({
           uid: userDoc.id,
           ...userDoc.data(),
@@ -27,6 +30,7 @@ const UsersList = () => {
     fetchUsers();
   }, []);
 
+  // Conditional rendering based on loading status
   const fetchedList = loading ? <p>Loading...</p> : (
     <table className="user-table">
       <thead>

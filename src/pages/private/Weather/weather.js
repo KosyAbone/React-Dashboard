@@ -3,6 +3,7 @@ import axios from "axios";
 import "./weather.css";
 
 const Weather = () => {
+    // State variables to manage weather data, loading status, location and errors
     const [weatherData, setWeatherData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

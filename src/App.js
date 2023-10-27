@@ -12,7 +12,7 @@ import UserList from './pages/public/Main/userList';
 import Map from './pages/private/Map/map';
 import Profile from './pages/private/Profile/profile';
 import Weather from './pages/private/Weather/weather';
-import NewsFeed from './pages/private/NewsFeed/newsfeed';
+import NewsFeed from './pages/private/NewsFeed/news-feed';
 import ToolsWidget from './pages/private/ToolsWidget/toolsPage';
 
 const App = () => {
