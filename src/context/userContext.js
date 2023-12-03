@@ -86,9 +86,9 @@ export const UserContextProvider = ({ children }) => {
     };
 
     // Function to send a password reset email
-    const forgotPassword = (email) => {
-        return sendPasswordResetEmail(auth, email);
-    };
+    // const forgotPassword = (email) => {
+    //     return sendPasswordResetEmail(auth, email);
+    // };
 
     // Create the context value with user data, loading, and functions
     const contextValue = {
