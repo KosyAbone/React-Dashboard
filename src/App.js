@@ -24,13 +24,13 @@ const App = () => {
             <Route path="/" element={<Home/>} />
             <Route path="about" element={<About/>} />
             <Route path="users" element={<UserList/>} />
-            <Route path="login" element={<Login/>}>
+            {/* <Route path="login" element={<Login/>}>
               <Route index element={<Profile />} />
               <Route path="profile" element={<Profile/>} />
               <Route path="map" element={<Map/>} />
               <Route path="weather" element={<Weather/>} />
               <Route path="news-feed" element={<NewsFeed/>} />
-              <Route path="tools" element={<ToolsWidget/>} />
+              <Route path="tools" element={<ToolsWidget/>} /> */}
             </Route>
             <Route path="*" element={<h1>Not Found</h1>} />
           </Routes>
